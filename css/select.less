@@ -1,0 +1,139 @@
+@baseColor1: #EF4E1E; //页面主色调
+@baseColor2: #666; //页面字体色
+@baseColor3: red; //价格色
+@baseColor4: #E8E8E8; //页面背景色
+
+/*页面整体布局*/
+
+.layout {
+    width: 100%;
+    /*最大宽度*/
+    // max-width: 800px;
+    /*最小宽度*/
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+
+/*顶部*/
+
+header {
+    color: white;
+    text-align: center;
+    background-color: @baseColor1;
+    height: 50px;
+    line-height: 55px;
+    font-size: 20px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    i {
+        margin-right: 30px;
+    }
+    span {
+        font-family: simsun;
+        font-weight: bold;
+        float: left;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        a {
+            color: white;
+            svg {
+                transform: rotate(-90deg);
+            }
+        }
+        a:hover {
+            color: white;
+        }
+    }
+}
+
+
+/*主体*/
+
+nav {
+    padding: 55px 5px 5px 5px;
+    background-color: @baseColor4;
+    .topic {
+        font-size: 24px;
+        li {
+            padding: 3px;
+            border: 1px solid #9D9D9D;
+            margin-bottom: 10px;
+            background: #fff;
+            border-radius: 5px;
+            a {
+                display: block;
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .tips {
+                    color: #FFF;
+                    width: 100%;
+                    height: 50px;
+                    position: absolute;
+                    line-height: 50px;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    bottom: 0px;
+                    left: 0px;
+                    background: rgba(0, 0, 0, 0.5)
+                }
+            }
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            h3,
+            h4,
+            {
+                color: @baseColor2;
+                font-size: 18px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-bottom: 12px;
+                span {
+                    margin-left: 10px;
+                }
+                em {
+                    color: red;
+                    margin-left: 15px;
+                }
+                del {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+/*底部*/
+
+footer {
+    background-color: @baseColor4;
+    position: fixed;
+    width: 100%;
+    a {
+        display: inline-block;
+        line-height: 45px;
+        padding-right: 5px;
+        color: #000;
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        span {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        img {
+            float: right;
+        }
+    }
+}
