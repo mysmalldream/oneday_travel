@@ -9,33 +9,28 @@
     <link rel="shortcut icon" href="oneday.ico" />
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/travel.css">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
 
     <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./lib/swiper/css/animate.min.css">
     <script src="./lib/swiper/js/swiper.min.js"></script>
     <script src="./lib/swiper/js/swiper.animate.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-size: 12px;
-        }
 
+    <!-- <style>
         html,
         body {
             height: 100%;
         }
 
-        body {
-            font-family: "microsoft yahei";
-        }
-
         .swiper-container {
-            /*  width: 320px;
-        height: 480px;*/
+            width: 320px;
+            height: 480px;
+            padding-top: 50px;
             width: 100%;
             height: 100%;
             background: #000;
+            font-size: .25rem;
         }
 
         .swiper-slide {
@@ -131,47 +126,86 @@
             font-weight: bold;
             color: #939393;
         }
-    </style>
+    </style> -->
+
 </head>
 
 <body>
+    <!-- 顶部 -->
+    <header class="clearfix">
+        <span><a href="javascript:history.go(-1)"><i class="fa fa-angle-left fa-2x"></i>
+            </a></span>
+        <i>行程单页</i>
+    </header>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <!-- slide1 -->
             <section class="swiper-slide swiper-slide1">
-                <div class="ys ani resize" style="top:20px;" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">First screen information 1</div>
-                <div class="ys ani resize" style="top:90px;" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">First screen information 2</div>
-                <div class="ys ani resize" style="top:160px;" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2s">First screen information 3</div>
-                <div class="ys ani resize" style="top:230px;" swiper-animate-effect="bounceInDown" swiper-animate-duration="1.5s" swiper-animate-delay="2.5s">First screen information 4</div>
-                <div class="ys ani resize" style="top:300px;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="4s">First screen information 5</div>
+                <div class="ys ani resize" style="top:0rem;" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+                    <div class="time clearfix">
+                        <div class="timeRight1 "></div>
+                        <div class="timeRight2 "></div>
+                    </div>
+                </div>
             </section>
             <!--slide2-->
             <section class="swiper-slide swiper-slide2">
-                <div class="ys ani resize" style="top:20px;" swiper-animate-effect="bounce" swiper-animate-duration="1.5s" swiper-animate-delay="0s">Second screen information 1</div>
-                <div class="ys ani resize" style="top:90px;" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">Second screen information 2</div>
-                <div class="ys ani resize" style="top:160px;" swiper-animate-effect="zoomInDown" swiper-animate-duration="0.5s" swiper-animate-delay="2s">Second screen information 3</div>
-                <div class="ys ani resize" style="top:230px;" swiper-animate-effect="bounceInDown" swiper-animate-duration="1.5s" swiper-animate-delay="2.5s">Second screen information 4</div>
+                <ul class="swiper-slide lists">
+                    <!-- 渲染的内容 -->
+                </ul>
             </section>
             <!--slide3-->
             <section class="swiper-slide swiper-slide3">
-                <div class="ys ani resize" style="top:20px;" swiper-animate-effect="bounce" swiper-animate-duration="1.5s" swiper-animate-delay="0s">Third screen information 1</div>
-                <div class="ys ani resize" style="top:90px;" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">Third screen information 2</div>
-                <div class="ys ani resize" style="top:160px;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s">Third screen information 3</div>
-                <div class="ys ani resize" style="top:230px;" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s" swiper-animate-delay="2.5s">Third screen information 4</div>
-                <div class="ys ani resize" style="top:300px;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="4s">Third screen information 5</div>
+                <div class="ys ani resize" style="top:170px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+                        <iframe width="350" scrolling="no" height="120" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=19&bgc=%23&bdc=%23&icon=1&temp=0&num=3&site=14"></iframe>
+                </div>
             </section>
             <!--slide4-->
             <section class="swiper-slide swiper-slide4">
-                <div class="ys ani resize" style="top:170px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0s">Fourth screen information 1</div>
-                <div class="ys ani resize" style="top:250px;" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2s">Fourth screen information 2</div>
+                <div class="ys ani resize" swiper-animate-effect="tada" swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+                    <div class="steps">
+                        <!-- 渲染的内容 -->
+                    </div>
+                </div>
+            </section>
+            <!--slide5-->
+            <section class="swiper-slide swiper-slide5">
+                <div class="ys ani resize" style="bottom:70px;" swiper-animate-effect="swing" swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+                    <div class="attention">
+                        <p> <span>注意事项</span></p>
+                        <ul class="ticket">
+                            <!-- 渲染的内容 -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--slide6-->
+            <section class="swiper-slide swiper-slide6">
+                <div class="ys ani resize" style="top:0px;" swiper-animate-effect="rotateIn" swiper-animate-duration="1.0s" swiper-animate-delay="0s">
+                    <div class="special">
+                        <p>温馨提示</p>
+                        <div class="mySelf">
+                            <form action="">本人
+                                <input type="radio" checked="true" id="r1" name="radio"><label for="r1">同意</label>
+                                <input type="radio" id="r2" name="radio"><label for="r2">不同意</label>
+                                <span class="upLoad"></span>
+                                <!-- 渲染的内容 -->
+                                <div class="colorRed">旅行社郑重提醒:游客不得参观或参与违反我国法律、法规、社会公德和旅游目的地的相关法律、风俗习惯、宗教禁忌的项目或者活动！</div>
+                                <button>我要报名</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
-
         <img src="images/arrow.png" style="width:20px;height:15px; top:460px; left:150px;" id="array" class="resize">
         <div class="swiper-pagination"></div>
     </div>
 </body>
 <script src="./js/rem.js"></script>
+<script src="./js/jquery/jquery-3.1.0.js"></script>
+<!-- <script src="./js/jquery/jquery-3.1.0.min.js"></script> -->
+<script src="./js/travel.js"></script>
 <!-- Swiper JS -->
 <script>
     scaleW = window.innerWidth / 320;
@@ -212,19 +246,21 @@
                 var opacity = 1 - Math.min(Math.abs(progress / 2), 0.5);
                 slide.style.opacity = opacity;
                 es = slide.style;
-                es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,' + translate + 'px,-' + translate + 'px) scaleY(' + scale + ')';
+                es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es
+                    .transform = 'translate3d(0,' + translate + 'px,-' + translate + 'px) scaleY(' + scale +
+                    ')';
 
             }
         },
         onSetTransition: function (swiper, speed) {
             for (var i = 0; i < swiper.slides.length; i++) {
                 es = swiper.slides[i].style;
-                es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+                es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration =
+                    es.OTransitionDuration = es.transitionDuration = speed + 'ms';
 
             }
         },
     })
 
 </script>
-
 </html>

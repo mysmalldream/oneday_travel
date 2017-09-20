@@ -1,0 +1,116 @@
+@baseColor1: #EF4E1E; //页面主色调
+@baseColor2: #666; //页面字体色
+@baseColor3: red; //价格色
+@baseColor4: #f5f5f9; //页面背景色
+@baseColor5: #3A74E2; //页面蓝色调
+
+/*页面整体布局*/
+
+.layout {
+    width: 100%;
+    /*最大宽度*/
+    // max-width: 800px;
+    /*最小宽度*/
+    min-width: 320px;
+    margin: 0 auto; // background: @baseColor4;
+}
+
+
+/*顶部*/
+
+header {
+    color: white;
+    text-align: center;
+    background-color: @baseColor1;
+    height: 50px;
+    line-height: 55px;
+    font-size: .4rem;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    i {
+        margin-right: 30px;
+    }
+    span {
+        float: left;
+        a {
+            display: inline-block;
+            color: white;
+            width: 50px;
+            height: 50px;
+            i {
+                margin-top: 5px;
+                margin-left: 10px;
+            }
+        }
+        a:hover {
+            color: white;
+        }
+    }
+}
+
+
+/*主体*/
+
+nav {
+    padding: 60px 0px 0px 0px;
+    font-size: .3rem;
+    background-color: @baseColor4;
+    p {
+        height: 40px;
+        line-height: 40px;
+        color: #3c3c3c;
+        border-bottom: 1px solid #e6e6e6;
+        background-color: #fff;
+        padding-left: 20px;
+    }
+    form {
+        background: #fff;
+        ul li {
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #e6e6e6;
+            background-color: #fff;
+            padding-left: 20px;
+            input:focus {
+                color: @baseColor5;
+            }
+            span {
+                padding-right: 20px;
+            }
+        }
+        .attention {
+            color: @baseColor3;
+            font-size: .25rem;
+            border-bottom: none;
+        }
+        .tips {
+            font-size: .25rem;
+            border-bottom: none;
+            color: #c2c2c2;
+            line-height: .3rem;
+            padding: 20px 20px;
+            height: 3.5rem;
+        }
+        .button {
+            list-style: none;
+            margin: 0 30px;
+            button {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 5px;
+                font-weight: 600;
+                border: 1px solid @baseColor5;
+                color: @baseColor5;
+                background-color: #fff;
+                font-size: .3rem;
+            }
+        }
+    }
+}
+
+
+/*底部*/
+
+footer {}

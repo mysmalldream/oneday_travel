@@ -2,6 +2,7 @@
 @baseColor2: #666; //页面字体色
 @baseColor3: red; //价格色
 @baseColor4: #E8E8E8; //页面背景色
+@baseColor5: #3A74E2; //页面蓝色调
 
 /*页面整体布局*/
 
@@ -17,14 +18,302 @@
 
 /*顶部*/
 
-// header {
-//     color: white;
-//     text-align: center;
-//     background-color: @baseColor1;
-//     height: 50px;
-//     line-height: 55px;
-//     font-size: 20px;
-//     position: fixed;
-//     z-index: 100;
-//     width: 100%;
-// }
+header {
+    color: white;
+    text-align: center;
+    background-color: @baseColor1;
+    height: 50px;
+    line-height: 55px;
+    font-size: .4rem;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    i {
+        margin-right: 30px;
+    }
+    span {
+        float: left;
+        a {
+            display: inline-block;
+            color: white;
+            width: 50px;
+            height: 50px;
+            i {
+                margin-top: 5px;
+                margin-left: 10px;
+            }
+        }
+        a:hover {
+            color: white;
+        }
+    }
+}
+
+
+/*主体全屏滚动*/
+
+html,
+body {
+    height: 100%;
+}
+
+.swiper-container {
+    width: 320px;
+    height: 480px;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    font-size: .25rem;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    background-color: #1A1A1A
+}
+
+img {
+    display: block;
+}
+
+.swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    opacity: .4;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+@-webkit-keyframes start {
+    0%,
+    30% {
+        opacity: 0;
+        -webkit-transform: translate(0, 10px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, -8px);
+    }
+}
+
+@-moz-keyframes start {
+    0%,
+    30% {
+        opacity: 0;
+        -moz-transform: translate(0, 10px);
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: translate(0, -8px);
+    }
+}
+
+@keyframes start {
+    0%,
+    30% {
+        opacity: 0;
+        transform: translate(0, 10px);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -8px);
+    }
+}
+
+.ani {
+    position: absolute;
+}
+
+.txt {
+    position: absolute;
+}
+
+#array {
+    position: absolute;
+    z-index: 999;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+}
+
+.ys {
+    text-align: center;
+    font-size: 3em;
+    display: block;
+    width: 100%;
+    max-height: 5em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #939393;
+}
+
+//自定义样式
+.swiper-slide1 {
+    background-image: url('http://test.elvmedia.cn:8080/test/image/002.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .ys {
+        color: #fff;
+        .time{
+            margin-top: 50%;
+            padding: 0 20px;
+            font-size: .6rem;
+            .timeRight1,.timeRight2{
+                margin-bottom: .1rem;
+                text-shadow: 3px 3px 3px rgba(41,255,255, 0.43);
+                span{
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+}
+
+.swiper-slide2 {
+    .swiper-slide {
+        padding: 20px;
+        .ani {
+            color: #fff;
+            padding-bottom: 10px;
+            position: static;
+            .title {
+                padding: 10px 0px 5px 0px;
+                .name {
+                    font-size: .3rem;
+                    letter-spacing: 3px;
+                }
+                // .rank {
+                //     color: #A6E22E;
+                //     font-size: .3rem;
+                //     margin-left: 30px;
+                // }
+            }
+            p {
+                font-size: .25rem;
+                color: #72767B;
+                line-height: 25px;
+                text-align: justify;
+            }
+        }
+        li:nth-child(even) {
+            background-color: #292E34;
+            margin-left: -20px;
+            padding-left: 20px;
+            margin-right: -20px;
+            padding-right: 20px;
+        }
+        li:nth-child(odd) {
+            background-color: #1A1A1A;
+            margin-left: -20px;
+            padding-left: 20px;
+        }
+    }
+}
+
+.swiper-slide3 {
+    background-image: url('../images/002.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .ys {
+        color: #fff;
+        #mainiframe{
+            color: red;
+        }
+    }
+}
+
+.swiper-slide4 {
+    background: #fff;
+    .ys {
+        .steps {
+            margin: 15px 20px;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 2px 3px 3px #CEC6C6;
+            font-size: .3rem;
+            padding: 5px;
+            line-height: .5rem;
+            text-align: left;
+        }
+    }
+}
+
+.swiper-slide5 {
+    background-image: url('../images/003.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    .ys {
+        color: #000;
+        .attention {
+            padding: 10px 30px 10px 30px;
+            background: rgba(0, 0, 0, .3);
+            p {
+                font-size: .3rem;
+                text-shadow: 4px 3px 3px #383737;
+                span {
+                    border-bottom: 3px solid #ccc;
+                    padding-bottom: 10px;
+                    color: red;
+                }
+            }
+            ul {
+                font-size: .2rem;
+                text-align: left;
+                color: #000;
+            }
+        }
+    }
+}
+
+.swiper-slide6 {
+    background: #fff;
+    .ys {
+        color: #000;
+        .special {
+            font-size: .2rem;
+            text-align: left;
+            p {
+                color: red;
+                font-size: .35rem;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .mySelf {
+                margin: 20px;
+                margin-top: 0px;
+                form {
+                    .colorRed {
+                        margin-top: 5px;
+                        color: red;
+                    }
+                    button {
+                        width: 100%;
+                        height: 40px;
+                        margin-top: .4rem;
+                        border-radius: 5px;
+                        font-weight: 600;
+                        border: 1px solid @baseColor5;
+                        color: @baseColor5;
+                        background-color: #fff;
+                        font-size: .3rem;
+                    }
+                }
+            }
+        }
+    }
+}
