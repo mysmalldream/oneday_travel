@@ -225,6 +225,7 @@ img {
 .swiper-slide5 .ys .attention {
   padding: 10px 30px 10px 30px;
   background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
 }
 .swiper-slide5 .ys .attention p {
   font-size: .3rem;
@@ -265,13 +266,39 @@ img {
   color: red;
 }
 .swiper-slide6 .ys .special .mySelf form button {
+  display: inline-block;
   width: 100%;
   height: 40px;
   margin-top: .4rem;
   border-radius: 5px;
   font-weight: 600;
   border: 1px solid #3A74E2;
-  color: #3A74E2;
   background-color: #fff;
   font-size: .3rem;
+}
+.swiper-slide6 .ys .special .mySelf form button a {
+  height: 90%;
+  width: 100%;
+  display: inline-block;
+  color: #3A74E2;
+  margin-top: 10px;
+}
+.swiper-slide6 .ys .special .mySelf form .gray {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  margin-top: .4rem;
+  border-radius: 5px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  color: #ccc;
+  background-color: #fff;
+  font-size: .3rem;
+}
+.swiper-slide6 .ys .special .mySelf form .gray a {
+  height: 90%;
+  width: 100%;
+  display: inline-block;
+  color: #ccc;
+  margin-top: 10px;
 }

@@ -56,15 +56,27 @@ nav {
     padding: 60px 0px 0px 0px;
     font-size: .3rem;
     background-color: @baseColor4;
-    p {
-        height: 40px;
-        line-height: 40px;
-        color: #3c3c3c;
-        border-bottom: 1px solid #e6e6e6;
-        background-color: #fff;
-        padding-left: 20px;
-    }
     form {
+        p {
+            height: 40px;
+            line-height: 40px;
+            color: #3c3c3c;
+            border-bottom: 1px solid #e6e6e6;
+            background-color: #fff;
+            padding-left: 20px;
+            .topic{
+                input{
+                   width: 100%; 
+                   font-size: .3rem;    
+                }
+            }
+            .yltprice{
+                input{
+                   width: 6%; 
+                   font-size: .3rem;    
+                }
+            }
+        }
         background: #fff;
         ul li {
             height: 40px;
@@ -81,7 +93,7 @@ nav {
         }
         .attention {
             color: @baseColor3;
-            font-size: .25rem;
+            font-size: .2rem;
             border-bottom: none;
         }
         .tips {
@@ -95,7 +107,7 @@ nav {
         .button {
             list-style: none;
             margin: 0 30px;
-            button {
+            #submits {
                 width: 100%;
                 height: 40px;
                 line-height: 40px;

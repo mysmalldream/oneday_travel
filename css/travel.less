@@ -168,14 +168,15 @@ img {
     background-size: cover;
     .ys {
         color: #fff;
-        .time{
+        .time {
             margin-top: 50%;
             padding: 0 20px;
             font-size: .6rem;
-            .timeRight1,.timeRight2{
+            .timeRight1,
+            .timeRight2 {
                 margin-bottom: .1rem;
-                text-shadow: 3px 3px 3px rgba(41,255,255, 0.43);
-                span{
+                text-shadow: 3px 3px 3px rgba(41, 255, 255, 0.43);
+                span {
                     margin: 0 15px;
                 }
             }
@@ -195,8 +196,7 @@ img {
                 .name {
                     font-size: .3rem;
                     letter-spacing: 3px;
-                }
-                // .rank {
+                } // .rank {
                 //     color: #A6E22E;
                 //     font-size: .3rem;
                 //     margin-left: 30px;
@@ -230,7 +230,7 @@ img {
     background-size: cover;
     .ys {
         color: #fff;
-        #mainiframe{
+        #mainiframe {
             color: red;
         }
     }
@@ -262,6 +262,7 @@ img {
         .attention {
             padding: 10px 30px 10px 30px;
             background: rgba(0, 0, 0, .3);
+            border-radius: 15px;
             p {
                 font-size: .3rem;
                 text-shadow: 4px 3px 3px #383737;
@@ -302,15 +303,41 @@ img {
                         color: red;
                     }
                     button {
+                        display: inline-block;
                         width: 100%;
                         height: 40px;
                         margin-top: .4rem;
                         border-radius: 5px;
                         font-weight: 600;
                         border: 1px solid @baseColor5;
-                        color: @baseColor5;
                         background-color: #fff;
                         font-size: .3rem;
+                        a{
+                            height: 90%;
+                            width: 100%;
+                            display: inline-block;
+                            color: @baseColor5;
+                            margin-top: 10px;
+                        }
+                    }
+                    .gray {
+                        display: inline-block;
+                        width: 100%;
+                        height: 40px;
+                        margin-top: .4rem;
+                        border-radius: 5px;
+                        font-weight: 600;
+                        border: 1px solid #ccc;
+                        color: #ccc;
+                        background-color: #fff;
+                        font-size: .3rem;
+                        a{
+                            height: 90%;
+                            width: 100%;
+                            display: inline-block;
+                            color: #ccc;
+                            margin-top: 10px;
+                        }
                     }
                 }
             }

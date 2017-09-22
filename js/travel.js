@@ -1,30 +1,48 @@
 $(function() {
-  
   //获取当前时间日期
   var dt = new Date();
-  var m=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Spt","Oct","Nov","Dec");
-  var w=new Array("Monday","Tuseday","Wednesday","Thursday","Friday","Saturday","Sunday");
-  var d=new Array("st","nd","rd","th");
-  mn=dt.getMonth();
-  wn=dt.getDay();
-  dn=dt.getDate();
+  var m = new Array(
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Spt",
+    "Oct",
+    "Nov",
+    "Dec"
+  );
+  var w = new Array(
+    "Monday",
+    "Tuseday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  );
+  var d = new Array("st", "nd", "rd", "th");
+  mn = dt.getMonth();
+  wn = dt.getDay();
+  dn = dt.getDate();
   var dns;
-  if(((dn)<1) ||((dn)>3)){
-  dns=d[3];
+  if (dn < 1 || dn > 3) {
+    dns = d[3];
+  } else {
+    dns = d[dn - 1];
+    if (dn == 11 || dn == 12) {
+      dns = d[3];
+    }
   }
-  else
-  {
-  dns=d[(dn)-1];
-  if((dn==11)||(dn==12)){
-  dns=d[3];
-  }
-  }
-  
+
   // console.log(m[mn]+" "+dn+dns+" " +w[wn-1]+" "+dt.getFullYear());
-  $(".timeRight1").html(w[wn-1]);
-  $(".timeRight2").html(m[mn]+'<span>'+dn+dns+'</span>'+dt.getFullYear());
-
-
+  $(".timeRight1").html(w[wn - 1]);
+  $(".timeRight2").html(
+    m[mn] + "<span>" + dn + dns + "</span>" + dt.getFullYear()
+  );
 
   // 获取地址栏id
   function GetQueryString(name) {
@@ -34,15 +52,14 @@ $(function() {
     return null;
   }
   // 调用方法
-  // console.log(GetQueryString("id"));
   $.ajax({
     type: "get",
-    url:
-      "http://test.elvmedia.cn:8080/test/distance.do?id=" +
-      GetQueryString("id"),
+    url: common_api + "distance.do?id=" + GetQueryString("id"),
     dataType: "json",
     success: function(data) {
-      // console.log(data);
+      console.log(data);
+      console.log(data.id);
+      console.log(data.title);
       var lis = "";
       var tickets = "";
       for (var i = 0; i < data.imgs.length; i++) {
@@ -67,6 +84,20 @@ $(function() {
       $(".steps").html(data.steps);
       $(".ticket").html(data.attention);
       $(".upLoad").append(data.instruction);
+      //动态生成的报名按钮
+      $(".colorRed").after("<button type="+"button"+"><a href="+'./pay.html?id='+GetQueryString("id")+'&yltprice='
+       +GetQueryString("yltprice")+'&topic='+escape(escape(GetQueryString("topic")))+'>'+"我要报名</a></button>");
+      // 按钮禁止与可点击
+      $(".input2").click(function() {
+        $("button").addClass("gray");
+        $("button a").removeAttr("href");
+        // console.log($("button a")[0]);
+      });
+      $(".input1").click(function() {
+          $("button").removeClass("gray");
+          $("button a").attr("href",'./pay.html?id='+GetQueryString("id")+'&yltprice='+GetQueryString("yltprice")+'&topic='+escape(escape(GetQueryString("topic"))));
+          // console.log($("button a")[0]);
+        });
     }
   });
 });

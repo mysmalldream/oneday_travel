@@ -23,19 +23,27 @@
         </header>
         <!-- 主体 -->
         <nav>
-            <p>红河谷森林公园纯玩2日游</p>
-            <p>支付金额:78元</p>
-            <form action="">
+            <form action="" name="form" id="documentForm">
+                <p><span class="topic"><input name="topic" type="text"  class="topic"></span></p>
+                <p>支付金额:<span class="yltprice"><input type="text" name="yltprice" class="yltprice"></span>元</p>
                 <ul>
-                    <li><span>姓名:</span><input type="text" autofocus="autofocus" name="" placeholder="请输入姓名" style="font-size:.25rem"></li>
-                    <li><span>手机号码:</span><input type="number" name="" placeholder="请输入11位手机号码" style="font-size:.25rem"></li>
-                    <li><span>身份证号:</span><input type="number" name="" placeholder="请输入18位身份证号码" style="font-size:.25rem"></li>
-                    <li class="attention">注:出发时必须携带身份证</li>
+                    <li><span>姓名:</span>
+                        <input id="names" type="text" required pattern="^[\u4e00-\u9fa5]+(·[\u4e00-\u9fa5]+)*$" autofocus="autofocus" name="username"
+                            placeholder="请输入姓名" style="font-size:.25rem">
+                    </li>
+                    <li><span>手机号码:</span>
+                        <input id="phone" required pattern="^(\+86)?1\d{10}$" type="tel" name="telephone" placeholder="请输入11位手机号码" style="font-size:.25rem">
+                    </li>
+                    <li><span>身份证号:</span>
+                        <input id="card" type="text" required pattern="\d{17}[0-9Xx]" name="IDcard" placeholder="请输入18位身份证号码" style="font-size:.25rem">
+                    </li>
+                    <li class="attention">注:请务必保证以上信息准确,真实,出发时必须携带身份证</li>
                     <li class="tips">温馨提示：为了给您提供更好的服务，请务必填写以上内容， 我们的各项优惠政策也适用于经过实名认证的如果您没有但不会影响您在此平台的正常购物，最终解释权归易旅通所有。
                     </li>
                 </ul>
                 <li class="button">
-                    <button>信息正确并支付</button>
+                    <!-- <button id="submit">信息正确并支付</button> -->
+                    <input  id="submits" type="button" name="" id="" value="信息正确并支付">
                 </li>
             </form>
         </nav>
@@ -45,5 +53,10 @@
     </div>
 </body>
 <script src="./js/rem.js"></script>
+<script src="./js/jquery/jquery-3.1.0.js"></script>
+<!-- <script src="./js/jquery/jquery-3.1.0.min.js"></script> -->
+<script src="./js/pay.js"></script>
+<script src="./js/commonapi.js"></script>
+<script src="./js/jquery/jquery.form.js"></script>
 
 </html>

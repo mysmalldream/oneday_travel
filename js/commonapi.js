@@ -1,5 +1,2 @@
 ﻿//存放服务器请求的统一域名
-export default {
-    apidomain:'http://kecikeci.iok.la'
-    
-}
+var common_api = "http://test.elvmedia.cn:8080/test/";

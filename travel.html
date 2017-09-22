@@ -17,116 +17,6 @@
     <script src="./lib/swiper/js/swiper.min.js"></script>
     <script src="./lib/swiper/js/swiper.animate.min.js"></script>
 
-    <!-- <style>
-        html,
-        body {
-            height: 100%;
-        }
-
-        .swiper-container {
-            width: 320px;
-            height: 480px;
-            padding-top: 50px;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            font-size: .25rem;
-        }
-
-        .swiper-slide {
-            width: 100%;
-            height: 100%;
-            background-color: #1A1A1A
-        }
-
-        img {
-            display: block;
-        }
-
-        .swiper-pagination-bullet {
-            width: 6px;
-            height: 6px;
-            background: #fff;
-            opacity: .4;
-        }
-
-        .swiper-pagination-bullet-active {
-            opacity: 1;
-        }
-
-        @-webkit-keyframes start {
-            0%,
-            30% {
-                opacity: 0;
-                -webkit-transform: translate(0, 10px);
-            }
-            60% {
-                opacity: 1;
-                -webkit-transform: translate(0, 0);
-            }
-            100% {
-                opacity: 0;
-                -webkit-transform: translate(0, -8px);
-            }
-        }
-
-        @-moz-keyframes start {
-            0%,
-            30% {
-                opacity: 0;
-                -moz-transform: translate(0, 10px);
-            }
-            60% {
-                opacity: 1;
-                -moz-transform: translate(0, 0);
-            }
-            100% {
-                opacity: 0;
-                -moz-transform: translate(0, -8px);
-            }
-        }
-
-        @keyframes start {
-            0%,
-            30% {
-                opacity: 0;
-                transform: translate(0, 10px);
-            }
-            60% {
-                opacity: 1;
-                transform: translate(0, 0);
-            }
-            100% {
-                opacity: 0;
-                transform: translate(0, -8px);
-            }
-        }
-
-        .ani {
-            position: absolute;
-        }
-
-        .txt {
-            position: absolute;
-        }
-
-        #array {
-            position: absolute;
-            z-index: 999;
-            -webkit-animation: start 1.5s infinite ease-in-out;
-        }
-
-        .ys {
-            text-align: center;
-            font-size: 3em;
-            display: block;
-            width: 100%;
-            max-height: 5em;
-            font-family: Arial;
-            font-weight: bold;
-            color: #939393;
-        }
-    </style> -->
 
 </head>
 
@@ -186,12 +76,12 @@
                         <p>温馨提示</p>
                         <div class="mySelf">
                             <form action="">本人
-                                <input type="radio" checked="true" id="r1" name="radio"><label for="r1">同意</label>
-                                <input type="radio" id="r2" name="radio"><label for="r2">不同意</label>
+                                <input class="input1" checked type="radio"  id="r1" name="radio1"><label for="r1">同意</label>
+                                <input class="input2"  type="radio"  id="r2" name="radio1"><label for="r2">不同意</label>
                                 <span class="upLoad"></span>
                                 <!-- 渲染的内容 -->
                                 <div class="colorRed">旅行社郑重提醒:游客不得参观或参与违反我国法律、法规、社会公德和旅游目的地的相关法律、风俗习惯、宗教禁忌的项目或者活动！</div>
-                                <button>我要报名</button>
+                               <!-- 渲染的按钮 -->
                             </form>
                         </div>
                     </div>
@@ -206,6 +96,7 @@
 <script src="./js/jquery/jquery-3.1.0.js"></script>
 <!-- <script src="./js/jquery/jquery-3.1.0.min.js"></script> -->
 <script src="./js/travel.js"></script>
+<script src="./js/commonapi.js"></script>
 <!-- Swiper JS -->
 <script>
     scaleW = window.innerWidth / 320;
@@ -263,4 +154,5 @@
     })
 
 </script>
+
 </html>
