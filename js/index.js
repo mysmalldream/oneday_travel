@@ -2,6 +2,7 @@ $(function() {
   $.ajax({
     type: "get",
     url: common_api+"sceniclist.do",
+    // url: "http://192.168.1.200:8080/interface/sceniclist.do",
     dataType: "json",
     success: function(data) {
       console.log(data);
@@ -26,6 +27,10 @@ $(function() {
             '</li>';
         $(".topics").html(lis);
         }
-    }
+        if (data.status == 0) {
+          console.log("服务器数据错误~");
+          window.location.href = "../error.html?cuowu=" + escape(data.message);
+        }    
+    },
   });
 });

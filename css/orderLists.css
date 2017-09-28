@@ -58,18 +58,24 @@ nav .lists li a {
 nav .lists li a .pics img {
   width: 110px;
   height: 80px;
+  border-radius: 15px;
 }
 nav .lists li a .right {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 nav .lists li a .right h3 {
   font-size: .25rem;
   color: #363636;
-  margin: 10px 0px;
+  margin: 0px 0px;
 }
 nav .lists li a .right p {
   font-size: .20rem;
   color: #7F7F7F;
   margin: 5px 0px;
+}
+nav .lists li a .right .success {
+  color: #EF4E1E;
+  margin-left: 10px;
+  font-size: .25rem;
 }
 /*底部*/

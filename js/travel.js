@@ -57,9 +57,8 @@ $(function() {
     url: common_api + "distance.do?id=" + GetQueryString("id"),
     dataType: "json",
     success: function(data) {
-      console.log(data);
-      console.log(data.id);
-      console.log(data.title);
+      // console.log(data);
+      // console.log(data.title);
       var lis = "";
       var tickets = "";
       for (var i = 0; i < data.imgs.length; i++) {
@@ -69,7 +68,7 @@ $(function() {
       }
       for (var i = 0; i < data.introduce.length; i++) {
         lis +=
-          '<li class="ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s">' +
+          '<li class="ani"  swiper-animate-effect="rollIn" swiper-animate-duration="1.0s" swiper-animate-delay="0s">' +
           '<div class="title">' +
           '<i class="name">' +
           data.introduce[i].topic +
@@ -84,9 +83,9 @@ $(function() {
       $(".steps").html(data.steps);
       $(".ticket").html(data.attention);
       $(".upLoad").append(data.instruction);
-      //动态生成的报名按钮
+      //动态生成的报名按钮(URL传值需要编码两次)
       $(".colorRed").after("<button type="+"button"+"><a href="+'./pay.html?id='+GetQueryString("id")+'&yltprice='
-       +GetQueryString("yltprice")+'&topic='+escape(escape(GetQueryString("topic")))+'>'+"我要报名</a></button>");
+      +GetQueryString("yltprice")+'&topic='+escape(escape(GetQueryString("topic")))+'>'+"我要报名</a></button>");
       // 按钮禁止与可点击
       $(".input2").click(function() {
         $("button").addClass("gray");
@@ -94,10 +93,15 @@ $(function() {
         // console.log($("button a")[0]);
       });
       $(".input1").click(function() {
-          $("button").removeClass("gray");
-          $("button a").attr("href",'./pay.html?id='+GetQueryString("id")+'&yltprice='+GetQueryString("yltprice")+'&topic='+escape(escape(GetQueryString("topic"))));
-          // console.log($("button a")[0]);
-        });
-    }
+        $("button").removeClass("gray");
+        $("button a").attr("href","./pay.html?id=" +GetQueryString("id") +"&yltprice=" +GetQueryString("yltprice") +"&topic=" +escape(escape(GetQueryString("topic")))
+        );
+        // console.log($("button a")[0]);
+      });
+      if (data.status == 0) {
+        console.log("服务器数据错误~");
+        window.location.href = "../error.html?cuowu=" + escape(data.message);
+      }
+    },
   });
 });

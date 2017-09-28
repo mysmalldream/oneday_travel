@@ -23,40 +23,49 @@
         </header>
         <!-- 主体 -->
         <nav>
-            <div class="tops clearfix">
-                <div class="left fl">
-                    <img src="./images/icon1_img.png" alt="">
+            <div id="mains">
+                <!-- <div class="tops clearfix">
+                    <div class="left fl">
+                        <img src="./images/icon1_img.png" alt="">
+                    </div>
+                    <div class="right ">
+                        <div class="topic">红河谷森林哈哈林哈哈林哈哈林哈哈林哈哈林哈哈哈哈</div>
+                        <div class="oldPrice">原价:<span>¥108/人</span></div>
+                        <div class="newPrice">现价:<span class="fontColor">¥78/人</span><input id="yltprice" type="hidden" name="yltprice" value=""></div>
+                    </div>
                 </div>
-                <div class="right ">
-                    <div class="topic">红河谷森林公园纯玩2日游</div>
-                    <div class="oldPrice">原价:<span>¥108/人</span></div>
-                    <div class="newPrice">现价:<span class="fontColor">¥78/人</span></div>
-                </div>
+                <ul class="date">
+                    <li><span>2017年09月23日出发</li>
+                    
+                    <li><span>2017年09月22日前可退</span><input id="refunddate" type="hidden" name="refunddate" value=""></li>
+                </ul> 
+                <input id="refuse" type="hidden" name="refuse" value="">
+            -->
             </div>
-            <ul class="date">
-                <li><span>2017年09月23日-2017年09月24日</span></li>
-                <li><span>2017年09月22日前可退</span></li>
-            </ul>
+
             <div class="excuse">
                 <p>退票原因</p>
                 <form action="">
+                    <input id="excuses" type="hidden" name="id" value="">
+                    <input id="cause" type="hidden" name="refundreason" value="地址、电话输入有误">
                     <div>
-                        <input type="radio" name="radio"  checked="true" id="r1"> <label for="r1">地址、电话输入有误</label>
+                        <input type="radio" name="radio" checked value="1"  id="r1"> <label for="r1">地址、电话输入有误</label>
                     </div>
                     <div>
-                        <input type="radio" name="radio" id="r2"> <label for="r2">计划有变,不想去了</label>
+                        <input type="radio" name="radio"  id="r2"> <label for="r2">计划有变,不想去了</label>
                     </div>
                     <div>
-                        <input type="radio" name="radio" id="r3"> <label for="r3">已经去过</label>
+                        <input type="radio" name="radio" value="已经去过" id="r3"> <label for="r3">已经去过</label>
                     </div>
                     <div>
-                        <input type="radio" name="radio" id="r4"> <label for="r4">其他</label>
+                        <input type="radio" name="radio"  id="r4"> <label for="r4">其他</label>
                     </div>
                     <p class="please">
                         请您如实填写退票缘由,我们的工作人员将在您申请退款日内进行处理,由此带来的不便我们深表歉意,非常感谢您的大力配合.
                     </p>
-                    <button>退款</button>
+                    <div class="button">退款</div>
                 </form>
+                <div class="looks"></div>
             </div>
         </nav>
         <!-- 底部 -->
@@ -65,5 +74,9 @@
     </div>
 </body>
 <script src="./js/rem.js"></script>
+<script src="./js/jquery/jquery-3.1.0.js"></script>
+<!-- <script src="./js/jquery/jquery-3.1.0.min.js"></script> -->
+<script src="./js/myOrder.js"></script>
+<script src="./js/commonapi.js"></script>
 
 </html>

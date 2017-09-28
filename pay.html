@@ -23,29 +23,31 @@
         </header>
         <!-- 主体 -->
         <nav>
-            <form action="" name="form" id="documentForm">
-                <p><span class="topic"><input name="topic" type="text"  class="topic"></span></p>
-                <p>支付金额:<span class="yltprice"><input type="text" name="yltprice" class="yltprice"></span>元</p>
+            <form action="" name="form" id="documentForm" onsubmit="return false;">
+                <input id="ceshi" type="hidden" name="id" value="111">
+                <p><span class="topic"></span><input name="topic" type="hidden" value=""  class="topics"></p>
+                <p>支付金额:<span class="yltprice"></span><input type="hidden" name="yltprice" value="" class="yltprices">元</p>
                 <ul>
                     <li><span>姓名:</span>
-                        <input id="names" type="text" required pattern="^[\u4e00-\u9fa5]+(·[\u4e00-\u9fa5]+)*$" autofocus="autofocus" name="username"
-                            placeholder="请输入姓名" style="font-size:.25rem">
+                        <input id="names" type="text" onblur="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" autofocus="autofocus" name="username"
+                        placeholder="请输入姓名" style="font-size:.25rem"><em  class="names"></em>
                     </li>
                     <li><span>手机号码:</span>
-                        <input id="phone" required pattern="^(\+86)?1\d{10}$" type="tel" name="telephone" placeholder="请输入11位手机号码" style="font-size:.25rem">
+                        <input id="phone" maxlength="11"  type="tel" name="telephone" placeholder="请输入11位手机号码" style="font-size:.25rem"><em  class="phone"></em>
                     </li>
                     <li><span>身份证号:</span>
-                        <input id="card" type="text" required pattern="\d{17}[0-9Xx]" name="IDcard" placeholder="请输入18位身份证号码" style="font-size:.25rem">
+                        <input id="card" type="text" required="required" pattern="\d{17}[0-9Xx]" name="IDcard" placeholder="请输入18位身份证号码" style="font-size:.25rem"><em  class="card"></em>
                     </li>
                     <li class="attention">注:请务必保证以上信息准确,真实,出发时必须携带身份证</li>
                     <li class="tips">温馨提示：为了给您提供更好的服务，请务必填写以上内容， 我们的各项优惠政策也适用于经过实名认证的如果您没有但不会影响您在此平台的正常购物，最终解释权归易旅通所有。
                     </li>
                 </ul>
                 <li class="button">
-                    <!-- <button id="submit">信息正确并支付</button> -->
-                    <input  id="submits" type="button" name="" id="" value="信息正确并支付">
+                    <input id="submits" type="button" name="tijiao" value="信息正确并支付">
+                    <!-- <input id="submits" type="submit" name="tijiao"  value="信息正确并支付111"> -->
                 </li>
             </form>
+            <div class="looks"></div>
         </nav>
         <!-- 底部 -->
         <!-- <footer class="">
@@ -58,5 +60,9 @@
 <script src="./js/pay.js"></script>
 <script src="./js/commonapi.js"></script>
 <script src="./js/jquery/jquery.form.js"></script>
+<script>
+    
+
+</script>
 
 </html>

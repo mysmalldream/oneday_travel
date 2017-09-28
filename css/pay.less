@@ -57,6 +57,10 @@ nav {
     font-size: .3rem;
     background-color: @baseColor4;
     form {
+        em{
+            color:red;
+            font-size: .15rem;
+        }
         p {
             height: 40px;
             line-height: 40px;
@@ -64,16 +68,16 @@ nav {
             border-bottom: 1px solid #e6e6e6;
             background-color: #fff;
             padding-left: 20px;
-            .topic{
-                input{
-                   width: 100%; 
-                   font-size: .3rem;    
+            .topic {
+                input {
+                    width: 100%;
+                    font-size: .3rem;
                 }
             }
-            .yltprice{
-                input{
-                   width: 6%; 
-                   font-size: .3rem;    
+            .yltprice {
+                input {
+                    width: 6%;
+                    font-size: .3rem;
                 }
             }
         }
@@ -118,6 +122,24 @@ nav {
                 background-color: #fff;
                 font-size: .3rem;
             }
+        }
+    }
+    .looks {
+        margin: 0px auto;
+        padding: 0 30px;
+        background: #fff;
+        >a {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid green;
+            color: green;
+            background-color: #fff;
+            font-size: .3rem;
         }
     }
 }

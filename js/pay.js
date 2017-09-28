@@ -6,26 +6,53 @@ $(function() {
     if (r != null) return unescape(r[2]);
     return null;
   }
-  var code = decodeURIComponent(
-    decodeURIComponent(GetQueryString("topic", "utf8"))
-  );
-  $(".topic").val(code);
-  $(".yltprice").val(GetQueryString("yltprice"));
+  console.log(GetQueryString("id"));
+  console.log(GetQueryString("yltprice"));
+  //解码两次
+  var code = decodeURIComponent(decodeURIComponent(GetQueryString("topic", "utf8")));
+  console.log(escape(escape(code)));
+  console.log(code);
+  $("#ceshi").val(GetQueryString("id"));
+  $(".topic").html(code);
+  $(".yltprice").html(GetQueryString("yltprice"));
+  $(".topics").val(GetQueryString("topic"));
+  $(".yltprices").val(GetQueryString("yltprice"));
+  
 
+  // $(".looks").hide(); //查看订单按钮隐藏
+  //表单验证
+  $("#names").on('blur',function(){
+    if (form.username.value == '') {
+      $(".names").text('不能为空')
+      form.username.focus();
+      return false;
+   }else{$(".names").text('')}
+  });
+  $("#phone").on('blur',function(){
+    if (form.telephone.value == '') {
+      $(".phone").text('不能为空')
+      form.telephone.focus();
+      return false;
+   }else{$(".phone").text('')}
+  });
+  $("#card").on('blur',function(){
+    if (form.IDcard.value == '') {
+      $(".card").text('不能为空')
+      form.IDcard.focus();
+      return false;
+   }else{$(".card").text('')}
+  });
+  
   // 表单数据提交
-  // console.log($(".yltprice").val());
-  // console.log($(".IDcard").val());
-
   $("#submits").click(function() {
     upForm();
-    // console.log($(".topic").val());
-    // console.log($(".yltprice").val());
-    // console.log($("#names").val());
-    // console.log($("#phone").val());
-    // console.log($("#card").val());
+    console.log($(".topic").html());
+    console.log($(".yltprice").html());
+    console.log($("#names").val());
+    console.log($("#phone").val());
+    console.log($("#card").val());
+    console.log($("#ceshi").val());
   });
-  // console.log("打印提交的表单数据:" + $("#documentForm").serialize());
-
   function upForm() {
     $.ajax({
       cache: false,
@@ -34,24 +61,28 @@ $(function() {
       async: true,
       url: "http://192.168.1.200:8080/interface/unifiedorder.do",
       data: {
-        topic: $(".topic").val(),
-        yltprice: $(".yltprice").val(),
+        topic: code,
+        yltprice: $(".yltprices").val(),
         username: $("#names").val(),
         telephone: $("#phone").val(),
-        IDcard: $("#card").val()
+        IDcard: $("#card").val(),
+        id:$("#ceshi").val()
       },
-      error: function(data) {
-        if (data.status == 0) {
-          console.log("提交错误");
-        }
-      },
-      success: function(data) {
+       success: function(data) {
+        console.log(data);
         console.log(data.result);
-        window.location.href = data.result;
+        console.log(data.message);
+        if (data.status === 1) {
+          window.location.href = data.result;
+          $("#submits").hide();
+          setTimeout(function(){$(".looks").show();},3000);
+          $(".looks").html(
+            '<a href='+'./orderLists.html?id='+GetQueryString('id')+'>查看订单</a>');
+        } else{
+          console.log(data.message);
+           window.location.href = "./error.html?cuowu=" + data.message;
+        }
       }
     });
   }
-
-  // $("#submit").submit(console.log(634537));//表单提交
-  // $("#submit").onSubmit("location.href='跳转的页面';");
 });

@@ -46,6 +46,10 @@ nav {
 nav form {
   background: #fff;
 }
+nav form em {
+  color: red;
+  font-size: .15rem;
+}
 nav form p {
   height: 40px;
   line-height: 40px;
@@ -100,6 +104,24 @@ nav form .button #submits {
   font-weight: 600;
   border: 1px solid #3A74E2;
   color: #3A74E2;
+  background-color: #fff;
+  font-size: .3rem;
+}
+nav .looks {
+  margin: 0px auto;
+  padding: 0 30px;
+  background: #fff;
+}
+nav .looks > a {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: 1px solid green;
+  color: green;
   background-color: #fff;
   font-size: .3rem;
 }

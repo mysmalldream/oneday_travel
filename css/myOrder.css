@@ -44,7 +44,7 @@ nav {
   background-color: #f5f5f9;
 }
 nav .tops {
-  padding-top: 14px;
+  padding: 5px;
   background-color: #fff;
 }
 nav .tops .left {
@@ -54,21 +54,28 @@ nav .tops .left {
 nav .tops .left img {
   width: 100px;
   height: 100px;
+  border-radius: 15px;
 }
 nav .tops .right div {
-  height: 30px;
+  height: 15px;
 }
 nav .tops .right .topic {
-  margin-top: 10px;
+  margin-top: 15px;
+  font-size: .3rem;
+  height: 100%;
 }
 nav .tops .right .oldPrice {
+  margin-top: 3px;
   color: #666;
+  font-size: .25rem;
 }
 nav .tops .right .oldPrice span {
   margin-left: 15px;
 }
 nav .tops .right .newPrice {
+  margin-top: 5px;
   color: #666;
+  font-size: .25rem;
 }
 nav .tops .right .newPrice span {
   margin-left: 15px;
@@ -108,7 +115,7 @@ nav .excuse form .please {
   border-bottom: none;
   font-size: .25rem;
 }
-nav .excuse form button {
+nav .excuse form .button {
   width: 100%;
   height: 40px;
   line-height: 40px;
@@ -118,5 +125,11 @@ nav .excuse form button {
   color: #3A74E2;
   background-color: #fff;
   font-size: .3rem;
+  text-align: center;
+}
+nav .excuse form .button a {
+  display: inline-block;
+  width: 100%;
+  color: #3A74E2;
 }
 /*底部*/

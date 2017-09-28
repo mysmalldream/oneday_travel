@@ -12,7 +12,7 @@ header {
   text-align: center;
   background-color: #EF4E1E;
   height: 50px;
-  line-height: 55px;
+  line-height: 50px;
   font-size: .4rem;
   position: fixed;
   z-index: 100;
@@ -144,7 +144,6 @@ img {
 }
 .swiper-slide1 .ys .time {
   margin-top: 50%;
-  padding: 0 20px;
   font-size: .6rem;
 }
 .swiper-slide1 .ys .time .timeRight1,
@@ -157,15 +156,12 @@ img {
   margin: 0 15px;
 }
 .swiper-slide2 .swiper-slide {
-  padding: 20px;
+  padding: 0px 20px 0px 20px;
 }
 .swiper-slide2 .swiper-slide .ani {
   color: #fff;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   position: static;
-}
-.swiper-slide2 .swiper-slide .ani .title {
-  padding: 10px 0px 5px 0px;
 }
 .swiper-slide2 .swiper-slide .ani .title .name {
   font-size: .3rem;
