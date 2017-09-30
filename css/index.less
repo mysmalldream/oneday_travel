@@ -121,24 +121,38 @@ nav {
 
 /*底部*/
 
-footer {
-    background-color: @baseColor4;
+.bottoms {
     position: fixed;
     width: 100%;
-    a {
-        display: inline-block;
-        line-height: 45px;
-        padding-right: 5px;
-        color: #000;
-        position: fixed;
-        bottom: 15px;
-        right: 15px;
-        span {
-            font-size: 16px;
-            margin-right: 10px;
+    bottom: 0px;
+    background: #fff;
+    display: flex;
+    border-top: 1px solid #ccc;
+    p {
+        font-size: .25rem;
+    }
+    .lefts,
+    .rights {
+        color: @baseColor1;
+        font-size: .5rem;
+        text-align: center;
+        flex: 1;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    .lefts {
+        .orderLists {
+            display: inline-block;
+            width: 100%;
+            color: @baseColor1;
         }
-        img {
-            float: right;
+    }
+    .rights {
+        border-left: 1px solid #ccc;
+        .refundLists {
+            display: inline-block;
+            width: 100%;
+            color: @baseColor1;
         }
     }
 }

@@ -34,8 +34,8 @@ $(function() {
             "</li>";
           $(".lists").append(lis);
         }
-        if (data.status === 0) {
-          window.location.href = "../error.html?cuowu=" + escape(data.message);
+        if (data.status === 1) {
+          window.location.href = "./error.html?cuowu=" + escape(data.message);
         }
       },
     });

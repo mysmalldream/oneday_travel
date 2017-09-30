@@ -1,17 +1,26 @@
 /*
  首页
 */
+function GetQueryString(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+  var r = window.location.search.substr(1).match(reg);
+  if (r != null) return unescape(r[2]);
+  return null;
+}
+console.log(GetQueryString("username"));
+console.log(GetQueryString("telephone"));
+console.log(GetQueryString("IDcard"));
+$(".lefts").html('<a class="orderLists" href="./orderLists.html"><h4 class="fa fa-user"></h4><p>我的订单</p></a>')
+$(".rights").html('<a class="refundLists" href="./refundLists.html"><h4 class="fa fa-list"></h4><p>退款订单</p></a>')
 $(function() {
   $.ajax({
     type: "get",
     url: common_api+"sceniclist.do",
-    // url: "http://192.168.1.200:8080/interface/sceniclist.do",
     dataType: "json",
     success: function(data) {
       console.log(data);
       var lis = "";
         for (var i = 0; i < data.result.length; i++){
-            // console.log(data.result[i].img);
             lis+=
             '<li>'+
             '<a href=./travel.html?id='+data.result[i].id+'&topic='+data.result[i].topic+'&yltprice='+data.result[i].yltprice+' class="pics">'+
@@ -32,7 +41,7 @@ $(function() {
         }
         if (data.status == 0) {
           console.log("服务器数据错误~");
-          window.location.href = "../error.html?cuowu=" + escape(data.message);
+          window.location.href = "./error.html?cuowu=" + escape(data.message);
         }    
     },
   });

@@ -67,10 +67,7 @@ $(function() {
       },
        success: function(data) {
         console.log(data);
-        console.log(data.message);
-        
         if (data.status === 1) {
-          // window.location.href = "./refundLists.html?id="+GetQueryString("id");    //退款成功默认显示的页面
           $(".buttons").hide();
           $(".looks").html(
             '<a href='+'./refundLists.html?id='+GetQueryString('id')+'&unique='+data.unique+'&telephone='+data.telephone+'>查看退款订单</a>');
