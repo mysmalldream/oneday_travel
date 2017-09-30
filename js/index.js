@@ -1,3 +1,6 @@
+/*
+ 首页
+*/
 $(function() {
   $.ajax({
     type: "get",
@@ -16,7 +19,7 @@ $(function() {
             '<div class="tips">'+data.result[i].topic+'</div>'+
             '</a>'+
             '<h3>'+
-            '<span>已有'+data.result[i].number+'人报名</span><span>'+data.result[i].plandate+'</span><span>'+data.result[i].refunddate+'</span>'+
+            '<p>已有'+data.result[i].number+'人报名</p><span>'+data.result[i].plandate+'</span><span>'+data.result[i].refunddate+'</span>'+
             '</h3>'+
             '<h4><span>市场价:</span>'+
             '<del>¥'+data.result[i].marketprice+'</del>'+

@@ -1,3 +1,6 @@
+/*
+ 我的订单(退款按钮)
+*/
 $(function() {
   function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -5,9 +8,10 @@ $(function() {
     if (r != null) return unescape(r[2]);
     return null;
   }
+  console.log(GetQueryString("unique"));   //唯一标示
   $.ajax({
     type: "get",
-    url: "http://192.168.1.200:8080/interface/orderdetail.do?id="+GetQueryString("id"),
+    url: common_api+"orderdetail.do?id="+GetQueryString("id"),
     dataType: "json",
     success: function(data) {
       // console.log(data);
@@ -37,13 +41,13 @@ $(function() {
   });
 
     $(".looks").hide(); //查看退款订单按钮隐藏
-  $(".button").on("click",function(){
+  $(".buttons").click(function(){
     console.log($("#excuses").val());
     console.log($("#cause").val());
     console.log($("#refunddate").val());
     console.log($("#yltprice").val());
-    // console.log($("#refuse").val());
-    // upForm();
+    console.log(GetQueryString("unique"));
+       upForm();
   })
 
   function upForm() {
@@ -52,30 +56,29 @@ $(function() {
       type: "post",
       dataType: "json",
       async: true,
-      url: "http://192.168.1.200:8080/interface/refund.do?id="+$("#excuses").val(),
+      url: common_api+"refund.do?id="+$("#excuses").val(),
+      // url: common_api+"refund.do?id="+$("#excuses").val()+'&unique='+GetQueryString("unique"),
       data: {
         id: $("#excuses").val(),
         refundreason: $("#cause").val(),
         refunddate: $("#refunddate").val(),
         yltprice: $("#yltprice").val(),
+        unique:GetQueryString("unique")
       },
        success: function(data) {
         console.log(data);
         console.log(data.message);
-        console.log(data.rufuse);
         
         if (data.status === 1) {
-          window.location.href = "./orderLists.html?refuse="+data.rufuse;    //退款成功默认显示的页面
-          $(".button").hide();
-          setTimeout(function(){$(".looks").show();},1000);
+          // window.location.href = "./refundLists.html?id="+GetQueryString("id");    //退款成功默认显示的页面
+          $(".buttons").hide();
           $(".looks").html(
-            '<a href='+'./orderLists.html?id='+GetQueryString('id')+'>查看退款订单</a>');
+            '<a href='+'./refundLists.html?id='+GetQueryString('id')+'&unique='+data.unique+'&telephone='+data.telephone+'>查看退款订单</a>');
+          $(".looks").show();
         } else{
            window.location.href = "./error.html?cuowu=" + escape(data.message);
         }
       }
     });
   }
-
-
 });

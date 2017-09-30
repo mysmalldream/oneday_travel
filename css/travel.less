@@ -162,15 +162,19 @@ img {
 }
 
 //自定义样式
+swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .swiper-slide1 {
     background-image: url('http://test.elvmedia.cn:8080/test/image/002.png');
+    // background-image: url('../images/loading.gif');
     background-repeat: no-repeat;
     background-size: cover;
     .ys {
         color: #fff;
         .time {
-            margin-top: 50%;
-            // padding: 0 20px;
+            margin-top: 50%; // padding: 0 20px;
             font-size: .6rem;
             .timeRight1,
             .timeRight2 {
@@ -181,32 +185,38 @@ img {
                 }
             }
         }
+        img{
+            // position: fixed;
+            margin: 50% auto;
+            line-height: 100%;
+        }
     }
 }
 
 .swiper-slide2 {
     .swiper-slide {
-        padding: 0px 20px 0px 20px;
+        padding: 0px 20px 0px 20px; // overflow:scroll;
         .ani {
             color: #fff;
             padding-bottom: 5px;
             position: static;
+            border-radius: 20px;
             .title {
                 // padding: 0px 0px 5px 0px;
                 .name {
-                    font-size: .3rem;
+                    font-size: .25rem;
                     letter-spacing: 3px;
-                } // .rank {
-                //     color: #A6E22E;
-                //     font-size: .3rem;
-                //     margin-left: 30px;
-                // }
+                }
             }
             p {
                 font-size: .25rem;
                 color: #72767B;
-                line-height: 25px;
+                line-height: 20px;
                 text-align: justify;
+                height: 120px; // height: 100%;
+                // text-overflow: ellipsis;
+                // white-space: normal;
+                overflow-y: scroll;
             }
         }
         li:nth-child(even) {
@@ -241,13 +251,13 @@ img {
     .ys {
         .steps {
             margin: 15px 20px;
-            height: 100%;
+            height: 100%; // height: 600px;
             border-radius: 10px;
             box-shadow: 0px 2px 3px 3px #CEC6C6;
-            font-size: .3rem;
+            font-size: .2rem;
             padding: 5px;
-            line-height: .5rem;
-            text-align: left;
+            line-height: .35rem;
+            text-align: left; // overflow-y:scroll !important;
         }
     }
 }
@@ -266,16 +276,17 @@ img {
             p {
                 font-size: .3rem;
                 text-shadow: 4px 3px 3px #383737;
+                margin-bottom: 15px;
                 span {
                     border-bottom: 3px solid #ccc;
-                    padding-bottom: 10px;
+                    padding-bottom: 5px;
                     color: red;
                 }
             }
             ul {
                 font-size: .2rem;
                 text-align: left;
-                color: #000;
+                color: #fff;
             }
         }
     }
@@ -286,8 +297,8 @@ img {
     .ys {
         color: #000;
         .special {
-            font-size: .2rem;
-            text-align: left;
+            font-size: .16rem;
+            text-align: left; // overflow:scroll
             p {
                 color: red;
                 font-size: .35rem;
@@ -302,17 +313,23 @@ img {
                         margin-top: 5px;
                         color: red;
                     }
+                    .upLoad {
+                        // overflow-y: scroll;
+                    }
                     button {
                         display: inline-block;
                         width: 100%;
                         height: 40px;
-                        margin-top: .4rem;
+                        margin-top: .1rem;
                         border-radius: 5px;
                         font-weight: 600;
                         border: 1px solid @baseColor5;
                         background-color: #fff;
-                        font-size: .3rem;
-                        a{
+                        font-size: .3rem; // position: fixed;
+                        // z-index: 100;
+                        // bottom: 50px;
+                        // padding-right: 20px;
+                        a {
                             height: 90%;
                             width: 100%;
                             display: inline-block;
@@ -323,15 +340,16 @@ img {
                     .gray {
                         display: inline-block;
                         width: 100%;
-                        height: 40px;
-                        margin-top: .4rem;
+                        height: 40px; // margin-top: .4rem;
                         border-radius: 5px;
                         font-weight: 600;
                         border: 1px solid #ccc;
                         color: #ccc;
                         background-color: #fff;
-                        font-size: .3rem;
-                        a{
+                        font-size: .3rem; // position: fixed;
+                        // z-index: 100;
+                        // bottom: 50px;
+                        a {
                             height: 90%;
                             width: 100%;
                             display: inline-block;

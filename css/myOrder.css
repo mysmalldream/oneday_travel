@@ -115,7 +115,7 @@ nav .excuse form .please {
   border-bottom: none;
   font-size: .25rem;
 }
-nav .excuse form .button {
+nav .excuse form .buttons {
   width: 100%;
   height: 40px;
   line-height: 40px;
@@ -127,9 +127,26 @@ nav .excuse form .button {
   font-size: .3rem;
   text-align: center;
 }
-nav .excuse form .button a {
+nav .excuse form .buttons a {
   display: inline-block;
   width: 100%;
   color: #3A74E2;
+}
+nav .excuse .looks {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: 1px solid green;
+  color: #3A74E2;
+  background-color: #fff;
+  font-size: .3rem;
+  text-align: center;
+}
+nav .excuse .looks a {
+  display: inline-block;
+  width: 100%;
+  color: green;
 }
 /*底部*/

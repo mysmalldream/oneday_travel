@@ -48,7 +48,7 @@ nav form {
 }
 nav form em {
   color: red;
-  font-size: .15rem;
+  font-size: .2rem;
 }
 nav form p {
   height: 40px;
@@ -61,6 +61,9 @@ nav form p {
 nav form p .topic input {
   width: 100%;
   font-size: .3rem;
+}
+nav form p .yltprice {
+  color: red;
 }
 nav form p .yltprice input {
   width: 6%;

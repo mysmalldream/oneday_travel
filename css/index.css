@@ -55,6 +55,7 @@ nav .topic li .pics {
 }
 nav .topic li .pics img {
   width: 100%;
+  border-radius: 3px;
 }
 nav .topic li .pics .tips {
   color: #FFF;
@@ -85,7 +86,9 @@ nav .topic li h4 {
   margin-bottom: 12px;
 }
 nav .topic li h3 span,
-nav .topic li h4 span {
+nav .topic li h4 span,
+nav .topic li h3 p,
+nav .topic li h4 p {
   margin-left: 10px;
 }
 nav .topic li h3 em,
@@ -96,6 +99,11 @@ nav .topic li h4 em {
 nav .topic li h3 del,
 nav .topic li h4 del {
   margin-left: 10px;
+}
+nav .topic li h3 p,
+nav .topic li h4 p {
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 /*底部*/
 footer {

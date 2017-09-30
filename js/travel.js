@@ -1,3 +1,6 @@
+/*
+ 行程单页
+*/
 $(function() {
   //获取当前时间日期
   var dt = new Date();

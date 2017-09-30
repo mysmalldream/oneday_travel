@@ -1,3 +1,6 @@
+/*
+ 404错误页
+*/
 $(function() {
   function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");

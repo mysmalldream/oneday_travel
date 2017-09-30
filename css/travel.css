@@ -134,6 +134,10 @@ img {
   font-weight: bold;
   color: #939393;
 }
+swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .swiper-slide1 {
   background-image: url('http://test.elvmedia.cn:8080/test/image/002.png');
   background-repeat: no-repeat;
@@ -155,6 +159,10 @@ img {
 .swiper-slide1 .ys .time .timeRight2 span {
   margin: 0 15px;
 }
+.swiper-slide1 .ys img {
+  margin: 50% auto;
+  line-height: 100%;
+}
 .swiper-slide2 .swiper-slide {
   padding: 0px 20px 0px 20px;
 }
@@ -162,16 +170,19 @@ img {
   color: #fff;
   padding-bottom: 5px;
   position: static;
+  border-radius: 20px;
 }
 .swiper-slide2 .swiper-slide .ani .title .name {
-  font-size: .3rem;
+  font-size: .25rem;
   letter-spacing: 3px;
 }
 .swiper-slide2 .swiper-slide .ani p {
   font-size: .25rem;
   color: #72767B;
-  line-height: 25px;
+  line-height: 20px;
   text-align: justify;
+  height: 120px;
+  overflow-y: scroll;
 }
 .swiper-slide2 .swiper-slide li:nth-child(even) {
   background-color: #292E34;
@@ -204,9 +215,9 @@ img {
   height: 100%;
   border-radius: 10px;
   box-shadow: 0px 2px 3px 3px #CEC6C6;
-  font-size: .3rem;
+  font-size: .2rem;
   padding: 5px;
-  line-height: .5rem;
+  line-height: .35rem;
   text-align: left;
 }
 .swiper-slide5 {
@@ -226,16 +237,17 @@ img {
 .swiper-slide5 .ys .attention p {
   font-size: .3rem;
   text-shadow: 4px 3px 3px #383737;
+  margin-bottom: 15px;
 }
 .swiper-slide5 .ys .attention p span {
   border-bottom: 3px solid #ccc;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: red;
 }
 .swiper-slide5 .ys .attention ul {
   font-size: .2rem;
   text-align: left;
-  color: #000;
+  color: #fff;
 }
 .swiper-slide6 {
   background: #fff;
@@ -244,7 +256,7 @@ img {
   color: #000;
 }
 .swiper-slide6 .ys .special {
-  font-size: .2rem;
+  font-size: .16rem;
   text-align: left;
 }
 .swiper-slide6 .ys .special p {
@@ -265,7 +277,7 @@ img {
   display: inline-block;
   width: 100%;
   height: 40px;
-  margin-top: .4rem;
+  margin-top: .1rem;
   border-radius: 5px;
   font-weight: 600;
   border: 1px solid #3A74E2;
@@ -283,7 +295,6 @@ img {
   display: inline-block;
   width: 100%;
   height: 40px;
-  margin-top: .4rem;
   border-radius: 5px;
   font-weight: 600;
   border: 1px solid #ccc;
